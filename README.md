@@ -26,6 +26,17 @@ Forecasting focuses only on *Zostera capricorni* dynamics (2019–2023).
 Beyond the core questions, a **sediment-type analysis** was conducted to examine whether substrate composition (sand, mud, mixed) might influence ZC occupancy patterns across sites.  
 This sediment comparison is treated as a supporting test to complement the main environmental and biotic analyses.
 
+
+### Why only three sites for prediction (Gladstone, Cairns, Townsville)
+We restricted forecasting to these three sites for data and methodological integrity:
+
+- **Continuous coverage 2010–2018:** Minimal gaps after monthly resampling; enough history for seasonal models.
+- **Driver availability:** `salt_lag1`, `eta`, and `current_speed_lag1` present with low missingness and stable ranges.
+- **Representative gradient:** The trio spans different GBR regions and environmental regimes, improving generality.
+- **Model diagnostics:** Reasonable residual autocorrelation and variance; other sites failed basic checks (heavy gaps, structural breaks, or zero-variance drivers).
+- **Scope control:** Limits compute and figure count to course requirements while preserving scientific value.
+
+Sites not modeled for prediction remain in the spatio-temporal analyses but were excluded from forecasting due to one or more of the issues above.
 ---
 
 ## Datasets
@@ -40,3 +51,17 @@ This sediment comparison is treated as a supporting test to complement the main 
 - `GBR_NESP-TWQ-3.2.1-5.4_JCU_Seagrass_1984-2018_Site-surveys.csv`-----**JCU TropWATER Seagrass Site Surveys (1984–2018)**
 - `2509.28d55d4-collected.csv`-----**eReefs Environmental Drivers**
 - `seagrass location.csv`-----**8 sites location**
+
+  ## Repository Structure
+├── 01_dataloading.ipynb # Build monthly occupancy (ZC & HO), merge with eReefs, export CSVs
+├── 02_ZC_spatiotemporal.ipynb # ZC spatial-temporal analysis (heatmaps, seasonal cycles, time series) and Correlation and environmental driver inspection
+├── 03_HO_biotic_analysis.ipynb # HO occupancy visualization (biotic covariate)
+├── 04_sediment_effects.ipynb # Sediment-type GLM test (supporting analysis)
+
+├── sites/
+│ ├── Gladstone_pred.ipynb # PCA + SARIMAX forecast for Gladstone
+│ ├── Cairns_pred.ipynb # PCA + SARIMAX forecast for Cairns
+│ ├── Townsville_pred.ipynb # PCA + SARIMAX forecast for Townsville
+
+
+
