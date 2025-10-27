@@ -53,15 +53,13 @@ Sites not modeled for prediction remain in the spatio-temporal analyses but were
 - `seagrass location.csv`-----**8 sites location**
 
   ## Repository Structure
-├── 01_dataloading.ipynb # Build monthly occupancy (ZC & HO), merge with eReefs, export CSVs
-├── 02_ZC_spatiotemporal.ipynb # ZC spatial-temporal analysis (heatmaps, seasonal cycles, time series) and Correlation and environmental driver inspection
-├── 03_HO_biotic_analysis.ipynb # HO occupancy visualization (biotic covariate)
-├── 04_sediment_effects.ipynb # Sediment-type GLM test (supporting analysis)
-
-├── sites/
-│ ├── Gladstone_pred.ipynb # PCA + SARIMAX forecast for Gladstone
-│ ├── Cairns_pred.ipynb # PCA + SARIMAX forecast for Cairns
-│ ├── Townsville_pred.ipynb # PCA + SARIMAX forecast for Townsville
+01_dataloading.ipynb # Build monthly occupancy (ZC & HO), merge with eReefs, export CSVs
+02_ZC_spatiotemporal.ipynb # ZC spatial-temporal analysis (heatmaps, seasonal cycles, time series) and Correlation and environmental driver inspection
+03_HO_biotic_analysis.ipynb # HO occupancy visualization (biotic covariate)
+04_sediment_effects.ipynb # Sediment-type GLM test (supporting analysis)
+05Gladstone_pred.ipynb # PCA + SARIMAX forecast for Gladstone
+06Cairns_pred.ipynb # PCA + SARIMAX forecast for Cairns
+07Townsville_pred.ipynb # PCA + SARIMAX forecast for Townsville
 
 
 
