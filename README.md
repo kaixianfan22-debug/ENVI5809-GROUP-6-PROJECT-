@@ -22,6 +22,10 @@ Forecasting focuses only on *Zostera capricorni* dynamics (2019–2023).
 4. **Forecasting:**  
    Can models trained on 2010–2018 ZC data forecast occupancy for 2019–2023 and outperform persistence and seasonal-naïve baselines?
 
+### Additional Exploratory Test  
+Beyond the core questions, a **sediment-type analysis** was conducted to examine whether substrate composition (sand, mud, mixed) might influence ZC occupancy patterns across sites.  
+This sediment comparison is treated as a supporting test to complement the main environmental and biotic analyses.
+
 ---
 
 ## Datasets
