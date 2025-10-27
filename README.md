@@ -1,9 +1,10 @@
-# ENVI5809-GROUP-6-PROJECT-
-Spatio-Temporal Dynamics and Environmental Drivers of Zostera capricorni in the Great Barrier Reef (2010–2018) with Short-Term Forecasts  
-## Overview
-This repository contains the Jupyter Notebooks and datasets used for the ENVI5809 project analyzing the **spatio-temporal dynamics** and **environmental drivers** of *Zostera capricorni* (ZC) seagrass in the Great Barrier Reef (GBR), with short-term forecasts from 2019–2023.
+# Spatio-Temporal Dynamics and Environmental Drivers of *Zostera capricorni* in the Great Barrier Reef (2010–2018)
 
-All analyses use data from **JCU TropWATER seagrass surveys (1984–2018)** and **eReefs environmental model outputs**, integrating biological, physical, and biotic covariates to explore ecological relationships and predictive modeling performance.
+## Overview
+This repository contains all Jupyter notebooks, processed datasets, and figures for the **ENVI5809 Final Project**.  
+The project investigates how *Zostera capricorni* (ZC) occupancy varies across eight Great Barrier Reef (GBR) sites from 2010–2018 and identifies key environmental and biotic drivers.  
+Environmental variables are sourced from the **eReefs model**, while *Halophila ovalis* (HO) is included as a **biotic covariate** to test whether its presence influences ZC occupancy.  
+Forecasting focuses only on *Zostera capricorni* dynamics (2019–2023).
 
 ---
 
@@ -13,10 +14,25 @@ All analyses use data from **JCU TropWATER seagrass surveys (1984–2018)** and 
    How does monthly occupancy of *Zostera capricorni* vary across eight GBR sites and seasons (2010–2018)?
 
 2. **Environmental drivers:**  
-   Which eReefs variables (temperature, salinity, sea-level anomaly η, currents, wind), including 1-month lags, are significantly associated with ZC occupancy?
+   Which eReefs variables (temperature, salinity, sea-level anomaly η, current speed, wind), including 1-month lags, are associated with ZC occupancy?
 
-3. **Biotic interactions:**  
-   How is *Halophila ovalis* (HO) occupancy associated with *Zostera capricorni* presence, and does HO act as a positive or negative biotic covariate?
+3. **Biotic interaction:**  
+   Does *Halophila ovalis* occupancy correlate with *Zostera capricorni* presence, indicating facilitation or competition?
 
-4. **Forecasting:**
-    Can models trained on 2010–2018 data forecast ZC occupancy for 2019–2023 and outperform persistence and seasonal-naïve baselines?
+4. **Forecasting:**  
+   Can models trained on 2010–2018 ZC data forecast occupancy for 2019–2023 and outperform persistence and seasonal-naïve baselines?
+
+---
+
+## Datasets
+
+| Dataset | Description | Source |
+|----------|--------------|--------|
+| **JCU TropWATER Seagrass Site Surveys (1984–2018)** | Species presence/absence, site, month, effort | JCU TropWATER |
+| **eReefs Environmental Drivers** | Temperature, salinity, sea-level anomaly (η), currents, wind | CSIRO & AIMS eReefs THREDDS |
+
+
+**Core input files:**
+- `GBR_NESP-TWQ-3.2.1-5.4_JCU_Seagrass_1984-2018_Site-surveys.csv`-----**JCU TropWATER Seagrass Site Surveys (1984–2018)**
+- `2509.28d55d4-collected.csv`-----**eReefs Environmental Drivers**
+- `seagrass location.csv`-----**8 sites location**
