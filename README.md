@@ -52,14 +52,16 @@ Sites not modeled for prediction remain in the spatio-temporal analyses but were
 - `2509.28d55d4-collected.csv`-----**eReefs Environmental Drivers**
 - `seagrass location.csv`-----**8 sites location**
 
-  ## Repository Structure
-01_dataloading.ipynb # Build monthly occupancy (ZC & HO), merge with eReefs, export CSVs
-02_ZC_spatiotemporal.ipynb # ZC spatial-temporal analysis (heatmaps, seasonal cycles, time series) and Correlation and environmental driver inspection
-03_HO_biotic_analysis.ipynb # HO occupancy visualization (biotic covariate)
-04_sediment_effects.ipynb # Sediment-type GLM test (supporting analysis)
-05Gladstone_pred.ipynb # PCA + SARIMAX forecast for Gladstone
-06Cairns_pred.ipynb # PCA + SARIMAX forecast for Cairns
-07Townsville_pred.ipynb # PCA + SARIMAX forecast for Townsville
+## Repository Structure
 
+| File | Description | Purpose |
+|------|--------------|----------|
+| **01_dataloading.ipynb** | Build monthly occupancy for *Zostera capricorni* and *Halophila ovalis*, merge with eReefs, export CSVs | Data preparation |
+| **02_ZC_spatiotemporal.ipynb** | ZC spatial–temporal analysis (heatmaps, seasonal cycles, time series) and correlation of environmental drivers | Exploratory analysis |
+| **03_HO_biotic_analysis.ipynb** | HO occupancy visualization and biotic interaction with ZC | Biotic factor analysis |
+| **04_sediment_effects.ipynb** | Sediment-type GLM test (ZC ∼ sediment categories) | Supporting abiotic test |
+| **05_Gladstone_pred.ipynb** | PCA + SARIMAX forecast for Gladstone | Site-specific prediction |
+| **06_Cairns_pred.ipynb** | PCA + SARIMAX forecast for Cairns | Site-specific prediction |
+| **07_Townsville_pred.ipynb** | PCA + SARIMAX forecast for Townsville | Site-specific prediction |
 
 
